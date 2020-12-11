@@ -141,7 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AdventOfCode.cpp" />
+    <ClCompile Include="AdventOfCode2020.cpp" />
     <ClCompile Include="Bag.cpp" />
     <ClCompile Include="House.cpp" />
     <ClCompile Include="main.cpp" />

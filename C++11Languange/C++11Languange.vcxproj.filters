@@ -36,7 +36,7 @@
     <ClCompile Include="Bag.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AdventOfCode.cpp">
+    <ClCompile Include="AdventOfCode2020.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
