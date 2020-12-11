@@ -575,7 +575,7 @@ bool AOC2020::AdventOfCode2020::IsSeatOccupied(const std::vector<std::string>& s
 
 void AOC2020::AdventOfCode2020::DayOne() const
 {
-	std::ifstream stream("Day1.txt");
+	std::ifstream stream("Files//Day1.txt");
 	int entry;
 
 	std::vector<int> entries;
@@ -628,7 +628,7 @@ void AOC2020::AdventOfCode2020::DayTwo() const
 	auto validPasswordsRepeat = 0;
 	auto validPasswordsPosition = 0;
 
-	std::ifstream stream("Day2.txt");
+	std::ifstream stream("Files//Day2.txt");
 	std::string passwordAndPolicy;
 
 	while (NextLine(stream, passwordAndPolicy))
@@ -660,7 +660,7 @@ void AOC2020::AdventOfCode2020::DayThree() const
 	auto currentLine = 0;
 	auto numberOfTrees = 0;
 
-	std::ifstream map("Day3.txt");
+	std::ifstream map("Files//Day3.txt");
 	std::string mapLine;
 
 	while (NextLine(map, mapLine))
@@ -689,7 +689,7 @@ void AOC2020::AdventOfCode2020::DayThree() const
 
 void AOC2020::AdventOfCode2020::DayFour() const
 {
-	std::ifstream fstream("Day4.txt");
+	std::ifstream fstream("Files//Day4.txt");
 	std::string line;
 
 	PassportValidator validator;
@@ -717,7 +717,7 @@ void AOC2020::AdventOfCode2020::DayFour() const
 
 void AOC2020::AdventOfCode2020::DayFive() const
 {
-	std::fstream fstream("Day5.txt");
+	std::fstream fstream("Files//Day5.txt");
 	std::string bordingInformation;
 	std::vector<int> seats;
 	int highestBoradingId = 0;
@@ -799,7 +799,7 @@ void AOC2020::AdventOfCode2020::DayFive() const
 
 void AOC2020::AdventOfCode2020::DaySix() const
 {
-	std::ifstream fstream("Day6.txt");
+	std::ifstream fstream("Files//Day6.txt");
 	std::string group;
 
 	int answers = 0;
@@ -820,7 +820,7 @@ void AOC2020::AdventOfCode2020::DaySix() const
 
 void AOC2020::AdventOfCode2020::DaySeven() const
 {
-	std::ifstream stream("Day7.txt");
+	std::ifstream stream("Files//Day7.txt");
 	std::string line;
 	std::vector<Bag> bagRules;
 
@@ -851,7 +851,7 @@ void AOC2020::AdventOfCode2020::DaySeven() const
 
 void AOC2020::AdventOfCode2020::DayEight() const
 {
-	std::ifstream stream("Day8.txt");
+	std::ifstream stream("Files//Day8.txt");
 	std::string line;
 	std::vector<std::pair<std::string, int>> code;
 
@@ -908,7 +908,7 @@ void AOC2020::AdventOfCode2020::DayEight() const
 
 void AOC2020::AdventOfCode2020::DayNine() const
 {
-	std::ifstream file("Day9.txt");
+	std::ifstream file("Files//Day9.txt");
 	long int value;
 	std::vector<long int> numbers;
 	
@@ -931,7 +931,7 @@ void AOC2020::AdventOfCode2020::DayNine() const
 
 void AOC2020::AdventOfCode2020::DayTen() const 
 {
-	std::ifstream stream("Day10.txt");
+	std::ifstream stream("Files//Day10.txt");
 	int value;
 	std::vector<int> adapters;
 
@@ -977,7 +977,7 @@ void AOC2020::AdventOfCode2020::DayTen() const
 
 void AOC2020::AdventOfCode2020::DayEleven() const 
 {
-	std::ifstream stream("Day11.txt");
+	std::ifstream stream("Files//Day11.txt");
 	std::vector<std::string> seats;
 	std::vector<std::string> seatsPart2;
 	std::string line;

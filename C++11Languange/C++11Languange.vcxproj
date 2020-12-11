@@ -151,32 +151,32 @@
   <ItemGroup>
     <ClInclude Include="AdventOfCode2020.h" />
     <ClInclude Include="Bag.h" />
-    <ClInclude Include="Day6Test.txt" />
     <ClInclude Include="House.h" />
     <ClInclude Include="PassportValidator.h" />
     <ClInclude Include="Skier.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Day1.txt" />
-    <Text Include="Day10.txt" />
-    <Text Include="Day10Test.txt" />
-    <Text Include="Day11.txt" />
-    <Text Include="Day11Test.txt" />
-    <Text Include="Day2.txt" />
-    <Text Include="Day3.txt" />
-    <Text Include="Day3Test.txt" />
-    <Text Include="Day8.txt" />
-    <Text Include="Day8Test.txt" />
-    <Text Include="Day5.txt" />
-    <Text Include="Day5Test.txt" />
-    <Text Include="Day4.txt" />
-    <Text Include="Day4Test.txt" />
-    <Text Include="Day9.txt" />
-    <Text Include="Day9Test.txt" />
-    <Text Include="Day7.txt" />
-    <Text Include="Day7Test.txt" />
-    <Text Include="Day7TestI2.txt" />
-    <Text Include="Day6.txt" />
+    <Text Include="Files\Day1.txt" />
+    <Text Include="Files\Day10.txt" />
+    <Text Include="Files\Day11.txt" />
+    <Text Include="Files\Day2.txt" />
+    <Text Include="Files\Day3.txt" />
+    <Text Include="Files\Day4.txt" />
+    <Text Include="Files\Day5.txt" />
+    <Text Include="Files\Day6.txt" />
+    <Text Include="Files\Day7.txt" />
+    <Text Include="Files\Day8.txt" />
+    <Text Include="Files\Day9.txt" />
+    <Text Include="Files\Tests\Day10.txt" />
+    <Text Include="Files\Tests\Day11.txt" />
+    <Text Include="Files\Tests\Day3.txt" />
+    <Text Include="Files\Tests\Day4.txt" />
+    <Text Include="Files\Tests\Day5.txt" />
+    <Text Include="Files\Tests\Day6.txt" />
+    <Text Include="Files\Tests\Day7.txt" />
+    <Text Include="Files\Tests\Day7_2.txt" />
+    <Text Include="Files\Tests\Day8.txt" />
+    <Text Include="Files\Tests\Day9.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
