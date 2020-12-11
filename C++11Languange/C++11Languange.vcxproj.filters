@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Files">
+      <UniqueIdentifier>{a8717076-e651-4287-b4ff-218a5d4d9e4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Files\Tests">
+      <UniqueIdentifier>{d5f96022-de1a-44d4-a821-29b5e4e92a6e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="House.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Skier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassportValidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdventOfCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="House.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Skier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassportValidator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Day6Test.txt">
+      <Filter>Files\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="AdventOfCode2020.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Day8.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day9.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day3.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day2.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day1.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day4.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day5.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day6.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day7.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day4Test.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+    <Text Include="Day5Test.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+    <Text Include="Day7Test.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+    <Text Include="Day7TestI2.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+    <Text Include="Day8Test.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+    <Text Include="Day9Test.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+    <Text Include="Day3Test.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+    <Text Include="Day10.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day11.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Day10Test.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+    <Text Include="Day11Test.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
