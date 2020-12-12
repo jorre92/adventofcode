@@ -39,9 +39,11 @@ Boat::Boat(int x, int y) : _x(x), _y(y), _xWayPoint(10), _yWayPoint(1)
 
 void Boat::Rotate(float angle)
 {
+	constexpr float rotationFactor = (3.14f / -180);
+
 	int ox = _dirX;
 	int oy = _dirY;
-	auto radians = angle * (3.14f / -180);
+	auto radians = angle * rotationFactor;
 	auto cosAngle = cos(radians);
 	auto sinAngle = sin(radians);
 
@@ -54,20 +56,14 @@ void Boat::Move(Direction direction, int speed)
 	int xDir, yDir;
 	DirToInt(direction, xDir, yDir);
 
-	for (int i = 0; i < speed; ++i)
-	{
-		_x += xDir;
-		_y += yDir;
-	}
+	_x += xDir * speed;
+	_y += yDir * speed;
 }
 
 void Boat::Forward(int speed)
 {
-	for (int i = 0; i < speed; ++i)
-	{
-		_x += _dirX;
-		_y += _dirY;
-	}
+	_x += _dirX * speed;
+	_y += _dirY * speed;
 }
 
 void Boat::Position(int& x, int& y) const
@@ -90,9 +86,11 @@ void Boat::MoveWaypoint(Direction dir, int speed)
 
 void Boat::RotateWaypoint(float angle)
 {
+	constexpr float rotationFactor = (3.14f / -180);
+
 	int ox = _xWayPoint;
 	int oy = _yWayPoint;
-	auto radians = angle * (3.14f / -180);
+	auto radians = angle * rotationFactor;
 	auto cosAngle = cos(radians);
 	auto sinAngle = sin(radians);
 
@@ -102,9 +100,6 @@ void Boat::RotateWaypoint(float angle)
 
 void Boat::MoveTowardsWayPoint(int speed)
 {
-	for (int i = 0; i < speed; ++i)
-	{
-		_x += _xWayPoint;
-		_y += _yWayPoint;
-	}
+	_x += _xWayPoint * speed;
+	_y += _yWayPoint * speed;
 }
