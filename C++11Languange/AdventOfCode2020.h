@@ -48,5 +48,7 @@ namespace AOC2020
 		void DayNine() const;
 		void DayTen() const;
 		void DayEleven() const;
+		void DayTwelve() const;
+		void DayThirteen() const;
 	};
 }

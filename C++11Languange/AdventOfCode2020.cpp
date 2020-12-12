@@ -7,6 +7,7 @@
 #include "AdventOfCode2020.h"
 #include "Skier.h"
 #include "PassportValidator.h"
+#include "Boat.h"
 
 /*PRIVATE FUNCTIONS*/
 
@@ -988,9 +989,7 @@ void AOC2020::AdventOfCode2020::DayEleven() const
 		seatsPart2.push_back(line);
 	}
 
-	while (UpdateSeatingInformation(seats, 4))
-	{
-	}
+	while (UpdateSeatingInformation(seats, 4));
 
 	size_t occupide = 0;
 
@@ -1005,13 +1004,10 @@ void AOC2020::AdventOfCode2020::DayEleven() const
 			}
 		}
 	}
-
 	std::cout << occupide << std::endl;
 
+	while (UpdateSeatingInformation(seatsPart2, 5, false));
 
-	while (UpdateSeatingInformation(seatsPart2, 5, false))
-	{
-	}
 	occupide = 0;
 
 	for (int y = 0; y < seatsPart2.size(); ++y)
@@ -1026,4 +1022,115 @@ void AOC2020::AdventOfCode2020::DayEleven() const
 		}
 	}
 	std::cout << occupide << std::endl;
+}
+
+void AOC2020::AdventOfCode2020::DayTwelve() const
+{
+	std::string testFile = "Files//Tests//Day12.txt";
+	std::string file = "Files//Day12.txt";
+
+	std::fstream input(file);
+
+	//Part one.
+	Boat boat;
+	char instruction;
+	int boatX, boatY;
+
+	while (NextChar(input, instruction))
+	{
+		int value;
+		NextItem(input, value);
+
+		switch (instruction)
+		{
+		case 'N': 
+			boat.Move(Direction::North, value);
+			break;
+		case 'S':
+			boat.Move(Direction::South, value);
+			break;
+		case 'E':
+			boat.Move(Direction::East, value);
+			break;
+		case 'W':
+			boat.Move(Direction::West, value);
+			break;
+		case 'L': 
+			boat.Rotate(-value);
+			break;
+		case 'R': 
+			boat.Rotate(value);
+			break;
+		case 'F': 
+			boat.Forward(value);
+			break;
+		default:
+			break;
+		}
+	}
+
+	boat.Position(boatX, boatY);
+
+	std::cout << "Answer Part 1 : " << abs(boatX) + abs(boatY) << std::endl;
+
+	//Part two.
+	input.clear();
+	input.seekg(0, std::ios::beg);
+
+	boat = Boat();
+
+	while (NextChar(input, instruction))
+	{
+		int value;
+		NextItem(input, value);
+
+		switch (instruction)
+		{
+		case 'N':
+			boat.MoveWaypoint(Direction::North, value);
+			break;
+		case 'S':
+			boat.MoveWaypoint(Direction::South, value);
+			break;
+		case 'E':
+			boat.MoveWaypoint(Direction::East, value);
+			break;
+		case 'W':
+			boat.MoveWaypoint(Direction::West, value);
+			break;
+		case 'L':
+			boat.RotateWaypoint(-value);
+			break;
+		case 'R':
+			boat.RotateWaypoint(value);
+			break;
+		case 'F':
+			boat.MoveTowardsWayPoint(value);
+			break;
+		default:
+			break;
+		}
+	}
+
+	boat.Position(boatX, boatY);
+
+	std::cout << "Answer Part 2 : " << abs(boatX) + abs(boatY) << std::endl;
+}
+
+void AOC2020::AdventOfCode2020::DayThirteen() const
+{
+	std::string testFile = "Files//Tests//Day13.txt";
+	std::string file = "Files//Day13.txt";
+
+	std::fstream input(testFile);
+
+	// Part one
+	std::cout << "Answer Part 1 : " << "[answer]" << std::endl;
+
+	// Reset input.
+	input.clear();
+	input.seekg(0, std::ios::beg);
+
+	// Part Two
+	std::cout << "Answer Part 2 : " << "[answer]" << std::endl;
 }

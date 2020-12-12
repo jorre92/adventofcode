@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClCompile Include="AdventOfCode2020.cpp" />
     <ClCompile Include="Bag.cpp" />
+    <ClCompile Include="Boat.cpp" />
     <ClCompile Include="House.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PassportValidator.cpp" />
@@ -151,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="AdventOfCode2020.h" />
     <ClInclude Include="Bag.h" />
+    <ClInclude Include="Boat.h" />
     <ClInclude Include="House.h" />
     <ClInclude Include="PassportValidator.h" />
     <ClInclude Include="Skier.h" />
@@ -159,6 +161,8 @@
     <Text Include="Files\Day1.txt" />
     <Text Include="Files\Day10.txt" />
     <Text Include="Files\Day11.txt" />
+    <Text Include="Files\Day12.txt" />
+    <Text Include="Files\Day13.txt" />
     <Text Include="Files\Day2.txt" />
     <Text Include="Files\Day3.txt" />
     <Text Include="Files\Day4.txt" />
@@ -169,6 +173,8 @@
     <Text Include="Files\Day9.txt" />
     <Text Include="Files\Tests\Day10.txt" />
     <Text Include="Files\Tests\Day11.txt" />
+    <Text Include="Files\Tests\Day12.txt" />
+    <Text Include="Files\Tests\Day13.txt" />
     <Text Include="Files\Tests\Day3.txt" />
     <Text Include="Files\Tests\Day4.txt" />
     <Text Include="Files\Tests\Day5.txt" />
