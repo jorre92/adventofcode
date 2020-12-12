@@ -39,9 +39,11 @@ Boat::Boat(int x, int y) : _x(x), _y(y), _xWayPoint(10), _yWayPoint(1)
 
 void Boat::Rotate(float angle)
 {
+	constexpr float rotationFactor = (3.14f / -180);
+
 	int ox = _dirX;
 	int oy = _dirY;
-	auto radians = angle * (3.14f / -180);
+	auto radians = angle * rotationFactor;
 	auto cosAngle = cos(radians);
 	auto sinAngle = sin(radians);
 
@@ -90,9 +92,11 @@ void Boat::MoveWaypoint(Direction dir, int speed)
 
 void Boat::RotateWaypoint(float angle)
 {
+	constexpr float rotationFactor = (3.14f / -180);
+
 	int ox = _xWayPoint;
 	int oy = _yWayPoint;
-	auto radians = angle * (3.14f / -180);
+	auto radians = angle * rotationFactor;
 	auto cosAngle = cos(radians);
 	auto sinAngle = sin(radians);
 
