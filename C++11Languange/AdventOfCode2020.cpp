@@ -1170,7 +1170,11 @@ void AOC2020::AdventOfCode2020::DayThirteen() const
 		std::cout << "Answer Part 1 : " << soonest * soonestLine << std::endl;
 	}
 
-	// part 2 better
+	// part 2
+	// find t
+	// where t is:
+	// t % bussNummer == bussIndex -> t + bussIndex % bussNumber == 0
+	// for all busses.
 	{
 		InfInt t = 0;
 		InfInt product = 1;
