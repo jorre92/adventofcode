@@ -8,6 +8,7 @@
 #include "Skier.h"
 #include "PassportValidator.h"
 #include "Boat.h"
+#include "../lib/InfInt.h"
 
 /*PRIVATE FUNCTIONS*/
 
@@ -1119,18 +1120,71 @@ void AOC2020::AdventOfCode2020::DayTwelve() const
 
 void AOC2020::AdventOfCode2020::DayThirteen() const
 {
+	// Set up
 	std::string testFile = "Files//Tests//Day13.txt";
 	std::string file = "Files//Day13.txt";
+	std::fstream input(file);
 
-	std::fstream input(testFile);
+	size_t arrivingBussTerminal;
+	std::string BussTimeTable;
+
+	NextItem(input, arrivingBussTerminal);
+	NextItem(input, BussTimeTable);
+
+	std::replace(BussTimeTable.begin(), BussTimeTable.end(), ',', ' ');
+	std::stringstream TimeTableStream(BussTimeTable);
+
+	std::vector<Buss> busses;
+
+	{
+		std::string bussNumberString;
+		for (int i = 0; NextItem(TimeTableStream, bussNumberString); ++i)
+		{
+			if (bussNumberString != "x")
+			{
+				int nummer = std::stoi(bussNumberString);
+
+				Buss buss;
+				buss.bussNumber = nummer;
+				buss.index = i;
+				busses.push_back(buss);
+			}
+		}
+	}
 
 	// Part one
-	std::cout << "Answer Part 1 : " << "[answer]" << std::endl;
+	{
+		auto soonest = arrivingBussTerminal;
+		auto soonestLine = 0;
 
-	// Reset input.
-	input.clear();
-	input.seekg(0, std::ios::beg);
+		for (auto& buss : busses)
+		{
+			auto minToWait = buss.bussNumber - (arrivingBussTerminal % buss.bussNumber);
+			if (minToWait < soonest)
+			{
+				soonest = minToWait;
+				soonestLine = buss.bussNumber;
+			}
+		}
 
-	// Part Two
-	std::cout << "Answer Part 2 : " << "[answer]" << std::endl;
+		std::cout << "Answer Part 1 : " << soonest * soonestLine << std::endl;
+	}
+
+	// part 2 better
+	{
+		InfInt t = 0;
+		InfInt product = 1;
+
+		for (auto buss : busses)
+		{
+			while ((t + buss.index) % buss.bussNumber != 0)
+			{
+				t += product;
+			}
+
+			product *= buss.bussNumber;
+		}
+
+		printf("ANSWER -> Running product :%d, Current min value: %s\n", product.toString().c_str(), t.toString().c_str());
+	}
 }
