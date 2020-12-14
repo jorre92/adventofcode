@@ -42,6 +42,9 @@
     <ClCompile Include="Boat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MemoryController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="House.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Boat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -138,6 +144,12 @@
     </Text>
     <Text Include="Files\Day13.txt">
       <Filter>Files</Filter>
+    </Text>
+    <Text Include="Files\Day14.txt">
+      <Filter>Files</Filter>
+    </Text>
+    <Text Include="Files\Tests\Day14.txt">
+      <Filter>Files\Tests</Filter>
     </Text>
   </ItemGroup>
 </Project>

@@ -9,6 +9,7 @@
 #include "PassportValidator.h"
 #include "Boat.h"
 #include "../lib/InfInt.h"
+#include "MemoryController.h"
 
 /*PRIVATE FUNCTIONS*/
 
@@ -1191,4 +1192,50 @@ void AOC2020::AdventOfCode2020::DayThirteen() const
 
 		printf("ANSWER -> Running product :%d, Current min value: %s\n", product.toString().c_str(), t.toString().c_str());
 	}
+}
+
+void AOC2020::AdventOfCode2020::DayFourteen() const
+{
+	// Set up
+	std::string testFile = "Files//Tests//Day14.txt";
+	std::string file = "Files//Day14.txt";
+	std::fstream input(file);
+
+	MemoryController memoryController;
+	MemoryController memoryController2;
+
+	// Part One
+	uintmax_t number;
+	size_t memory;
+
+	std::string line;
+	while (NextLine(input, line))
+	{
+		if (std::find(line.begin(), line.end(), '[') != line.end())
+		{
+			auto start = line.find('[');
+			auto end = line.find(']');
+
+			memory = std::stoi(line.substr(start + 1, end - start - 1));
+
+			start = line.find('=');
+			number = std::stoi(line.substr(start + 2));
+
+			memoryController.write(memory, number);
+			memoryController2.write2(memory, number);
+		}
+		else
+		{
+			std::string mask = line.substr(7);
+			memoryController.ApplyMask(mask);
+			memoryController2.ApplyMask(mask);
+		}
+	}
+
+	std::cout << memoryController.Sum() << std::endl;
+	std::cout << memoryController2.Sum() << std::endl;
+
+	//memoryController.Add(memory, number);
+	// Part Two
+
 }

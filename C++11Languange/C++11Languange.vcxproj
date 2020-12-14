@@ -146,6 +146,7 @@
     <ClCompile Include="Boat.cpp" />
     <ClCompile Include="House.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MemoryController.cpp" />
     <ClCompile Include="PassportValidator.cpp" />
     <ClCompile Include="Skier.cpp" />
   </ItemGroup>
@@ -154,6 +155,7 @@
     <ClInclude Include="Bag.h" />
     <ClInclude Include="Boat.h" />
     <ClInclude Include="House.h" />
+    <ClInclude Include="MemoryController.h" />
     <ClInclude Include="PassportValidator.h" />
     <ClInclude Include="Skier.h" />
   </ItemGroup>
@@ -163,6 +165,7 @@
     <Text Include="Files\Day11.txt" />
     <Text Include="Files\Day12.txt" />
     <Text Include="Files\Day13.txt" />
+    <Text Include="Files\Day14.txt" />
     <Text Include="Files\Day2.txt" />
     <Text Include="Files\Day3.txt" />
     <Text Include="Files\Day4.txt" />
@@ -175,6 +178,7 @@
     <Text Include="Files\Tests\Day11.txt" />
     <Text Include="Files\Tests\Day12.txt" />
     <Text Include="Files\Tests\Day13.txt" />
+    <Text Include="Files\Tests\Day14.txt" />
     <Text Include="Files\Tests\Day3.txt" />
     <Text Include="Files\Tests\Day4.txt" />
     <Text Include="Files\Tests\Day5.txt" />

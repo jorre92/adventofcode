@@ -50,6 +50,7 @@ namespace AOC2020
 		void DayEleven() const;
 		void DayTwelve() const;
 		void DayThirteen() const;
+		void DayFourteen() const;
 	};
 
 	struct Buss { int bussNumber; int index; bool operator<(Buss& b) { return bussNumber < b.bussNumber; } };
