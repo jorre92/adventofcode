@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <bitset>
 #include <math.h>
+#include <chrono>
 
 #include "AdventOfCode2020.h"
 #include "Skier.h"
@@ -1237,5 +1238,65 @@ void AOC2020::AdventOfCode2020::DayFourteen() const
 
 	//memoryController.Add(memory, number);
 	// Part Two
+
+}
+
+void AOC2020::AdventOfCode2020::DayFifteen() const
+{
+	// Set up
+	std::string testFile = "Files//Tests//Day15.txt";
+	std::string file = "Files//Day15.txt";
+	std::fstream input(file);
+
+	std::vector<uint64_t> gameNumbers;
+	std::string numbers;
+	NextItem(input, numbers);
+	std::replace(numbers.begin(), numbers.end(), ',', ' ');
+	std::stringstream stream(numbers);
+
+	uint64_t number;
+	while (NextItem(stream, number))
+	{
+		gameNumbers.push_back(number);
+	}
+
+	std::map<size_t, uint64_t> spoken;
+	uint64_t lastSpoken = 0;
+
+	auto timerStart = std::chrono::high_resolution_clock::now();
+	for (int i = 0; i < gameNumbers.size() - 1; ++i)
+	{
+		spoken[gameNumbers[i]] = spoken.size() + 1;
+	}
+	lastSpoken = gameNumbers.back();
+	uint64_t checks = 10;
+	uint64_t max = 30000000;
+	uint64_t maxDone = max/ checks;
+	int count = 0;
+	for (auto i = (gameNumbers.size() - 1); i < max - 1; ++i)
+	{
+		if (i % maxDone == 0)
+		{
+			std::cout << ++count*checks << "%" << std::endl;
+		}
+
+		auto _it = spoken.find(lastSpoken);
+		size_t item = i + 1;
+
+		if (_it != spoken.end())
+		{
+			auto temp = (*_it).first;
+			lastSpoken = item - (*_it).second;
+			spoken[temp] = item;
+		}
+		else
+		{
+			spoken[lastSpoken] = item;
+			lastSpoken = 0;
+		}
+	}
+
+	auto timerEnd = std::chrono::high_resolution_clock::now();
+	std::cout << lastSpoken << " time " << std::chrono::duration_cast<std::chrono::microseconds>(timerEnd - timerStart).count() << std::endl;
 
 }

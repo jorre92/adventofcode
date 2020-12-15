@@ -151,5 +151,11 @@
     <Text Include="Files\Tests\Day14.txt">
       <Filter>Files\Tests</Filter>
     </Text>
+    <Text Include="Files\Tests\Day15.txt">
+      <Filter>Files\Tests</Filter>
+    </Text>
+    <Text Include="Files\Day15.txt">
+      <Filter>Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
